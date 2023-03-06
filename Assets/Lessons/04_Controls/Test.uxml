@@ -1,11 +1,18 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(14, 41, 84); align-items: center; justify-content: space-around; flex-direction: column;">
-        <ui:Button text="Clicky" display-tooltip-when-elided="true" name="MyButton" style="background-color: rgba(188, 188, 188, 0); border-left-color: rgb(255, 0, 0); border-right-color: rgb(255, 0, 0); border-top-color: rgb(255, 0, 0); border-bottom-color: rgb(255, 0, 0); border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; color: rgb(255, 255, 255); border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; font-size: 50px;" />
-        <ui:VisualElement name="Box" style="flex-grow: 0; background-color: rgb(224, 219, 138); width: 100px; height: 100px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" />
-        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
-            <ui:Label tabindex="-1" text="This is &lt;b&gt;the&lt;/b&gt; text&#10;" display-tooltip-when-elided="true" name="MyLabel" enable-rich-text="true" style="color: rgb(255, 255, 255); font-size: 35px;" />
-            <ui:Label tabindex="-1" text="This is &lt;u&gt;the&lt;/u&gt; text&#10;" display-tooltip-when-elided="true" name="Label" style="color: rgb(255, 255, 255); font-size: 35px;" />
-            <ui:Label tabindex="-1" text="This is the text&#10;" display-tooltip-when-elided="true" name="Label" style="color: rgb(255, 255, 255); font-size: 35px;" />
+    <Style src="project://database/Assets/Lessons/04_Controls/ControlsUSS.uss?fileID=7433441132597879392&amp;guid=c7c9e46062f2bd746bdab18229430823&amp;type=3#ControlsUSS" />
+    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-color: rgb(22, 34, 77); padding-left: 31px; padding-right: 31px; padding-top: 31px; padding-bottom: 31px;">
+        <ui:VisualElement name="Slider" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); align-items: center;">
+            <ui:Slider picking-mode="Ignore" label="Magic Box" value="50" high-value="250" name="MySlider" show-input-field="true" page-size="0" tooltip="Select Here" tabindex="0" low-value="50" style="display: flex; color: rgb(255, 255, 255); font-size: 35px; margin-top: 20px; flex-shrink: 1; width: 80%; margin-bottom: 23px;" />
+            <ui:VisualElement name="SliderBox" style="flex-grow: 0; background-color: rgb(233, 223, 178); width: 100px; height: 100px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-items: center; justify-content: space-around; flex-direction: column; display: none;">
+            <ui:Button text="Clicky" display-tooltip-when-elided="true" name="MyButton" style="background-color: rgba(188, 188, 188, 0); border-left-color: rgb(255, 0, 0); border-right-color: rgb(255, 0, 0); border-top-color: rgb(255, 0, 0); border-bottom-color: rgb(255, 0, 0); border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; color: rgb(255, 255, 255); border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; font-size: 50px;" />
+            <ui:VisualElement name="Box" style="flex-grow: 0; background-color: rgb(224, 219, 138); width: 100px; height: 100px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" />
+            <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0);">
+                <ui:Label tabindex="-1" text="This is &lt;b&gt;the&lt;/b&gt; text&#10;" display-tooltip-when-elided="true" name="MyLabel" enable-rich-text="true" style="color: rgb(255, 255, 255); font-size: 35px;" />
+                <ui:Label tabindex="-1" text="This is &lt;u&gt;the&lt;/u&gt; text&#10;" display-tooltip-when-elided="true" name="Label" style="color: rgb(255, 255, 255); font-size: 35px;" />
+                <ui:Label tabindex="-1" text="This is the text&#10;" display-tooltip-when-elided="true" name="Label" style="color: rgb(255, 255, 255); font-size: 35px;" />
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -1,26 +1,56 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="Template_MiddleBadge" src="project://database/Assets/Project/Templates/Template_MiddleBadge.uxml?fileID=9197481963319205126&amp;guid=c7bf94a7f56079b47b789e293224ca32&amp;type=3#Template_MiddleBadge" />
+    <ui:Template name="Template_MiddleBadgeLocked" src="project://database/Assets/Project/Templates/Template_MiddleBadgeLocked.uxml?fileID=9197481963319205126&amp;guid=56f2db1f738f9ef48b4c71312c4aa07c&amp;type=3#Template_MiddleBadgeLocked" />
     <Style src="project://database/Assets/StyleSheets/Style.uss?fileID=7433441132597879392&amp;guid=bb396d114cdea0541b9d06b79e25fe77&amp;type=3#Style" />
-    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/04_Initial/img/low_poly_banner_design_1711.jpg?fileID=2800000&amp;guid=507dd5d1d8d82e34b8567efbbd7d2391&amp;type=3#low_poly_banner_design_1711&apos;);">
+    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Project/img/pexels-thanhhoa-tran-1462892.jpg?fileID=2800000&amp;guid=024f90e8d7261ce48bee11a739cbd378&amp;type=3#pexels-thanhhoa-tran-1462892&apos;); -unity-background-image-tint-color: rgb(190, 190, 190);">
         <ui:VisualElement name="TopContainer" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row; flex-basis: 80%;">
-            <ui:VisualElement name="TopLeft" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-basis: 20%; justify-content: flex-end; margin-right: 10%;">
-                <ui:VisualElement name="PanelMiniFaction" class="panel" style="flex-grow: 0; margin-left: 20px; margin-right: 0; margin-top: 20px; margin-bottom: 20px; padding-top: 50px; padding-bottom: 50px;" />
+            <ui:VisualElement name="TopLeft" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-basis: 20%; justify-content: flex-end; margin-right: 5%; margin-left: 2%;">
+                <ui:VisualElement name="PanelMiniFaction" class="panel" style="flex-grow: 1; margin-left: 20px; margin-right: 0; margin-top: 20px; margin-bottom: 20px; padding-top: 10px; padding-bottom: 10px; flex-direction: row; -unity-background-scale-mode: stretch-to-fill;">
+                    <ui:VisualElement name="VisualElement" style="flex-grow: 0; background-color: rgba(255, 255, 255, 0); background-image: url(&apos;project://database/Assets/Project/img/8666527_wolf_pack_battalion_icon.png?fileID=2800000&amp;guid=7c8177eea59ddc248ad79d8eced6bd9b&amp;type=3#8666527_wolf_pack_battalion_icon&apos;); -unity-background-scale-mode: scale-to-fit; width: 100px; height: 100px; margin-left: 10px; margin-right: 10px; -unity-background-image-tint-color: rgb(0, 0, 0);" />
+                    <ui:VisualElement name="VisualElement" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); display: flex; margin-left: 10px;">
+                        <ui:Label tabindex="-1" text="Mentors" display-tooltip-when-elided="true" name="Label" class="text_classic" style="color: rgb(255, 224, 0);" />
+                        <ui:Label tabindex="-1" text="Medivak" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255);" />
+                        <ui:Label tabindex="-1" text="1200 BCE" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
                 <ui:VisualElement name="PanelCharacter" class="panel" style="flex-grow: 0; flex-basis: 80%;" />
             </ui:VisualElement>
             <ui:VisualElement name="TopMiddle" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-basis: 60%; flex-direction: row; align-items: flex-end;">
                 <ui:VisualElement name="PanelFaction" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
                 <ui:VisualElement name="PanelBadges" class="panel" style="flex-grow: 1; width: 10%; height: 80%; margin-right: 10px; border-top-left-radius: 0; border-bottom-left-radius: 0;">
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
-                    <ui:VisualElement name="VisualElement" class="panel_badge" style="flex-grow: 1;" />
-                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;" />
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1; background-color: rgb(180, 180, 180);">
+                        <ui:Instance template="Template_MiddleBadge" name="Template_MiddleBadge" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;">
+                        <ui:Instance template="Template_MiddleBadge" name="Template_MiddleBadge" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;">
+                        <ui:Instance template="Template_MiddleBadge" name="Template_MiddleBadge" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;">
+                        <ui:Instance template="Template_MiddleBadgeLocked" name="Template_MiddleBadgeLocked" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VisualElement" class="panel_badge" style="flex-grow: 1;">
+                        <ui:Instance template="Template_MiddleBadgeLocked" name="Template_MiddleBadgeLocked" style="flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="panel_badge" style="flex-grow: 1;">
+                        <ui:Instance template="Template_MiddleBadgeLocked" name="Template_MiddleBadgeLocked" style="flex-grow: 1;" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="PanelList" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
                 <ui:VisualElement name="PanelInfo" style="flex-grow: 1; width: 20%; height: 80%; border-top-left-radius: 0; border-bottom-left-radius: 0;">
-                    <ui:VisualElement name="VisualElement" class="panel" style="flex-grow: 0; flex-basis: 100%; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 20px; border-bottom-right-radius: 0;" />
-                    <ui:VisualElement name="VisualElement" class="panel" style="flex-grow: 0; flex-basis: 100%; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
-                    <ui:VisualElement name="VisualElement" class="panel" style="flex-grow: 0; flex-basis: 100%; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 20px;" />
+                    <ui:VisualElement name="VisualElement" class="panel panle_info" style="margin-left: 5px; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+                        <ui:Label tabindex="-1" text="ERA GOAL:" display-tooltip-when-elided="true" class="text_classic" />
+                        <ui:Label tabindex="-1" text="Collect 7 Stars by fulfilling goals related to the ERA Stars" display-tooltip-when-elided="true" name="Label" style="flex-wrap: nowrap; white-space: normal; color: rgb(255, 255, 255); -unity-text-align: upper-center;" />
+                        <ui:Button text="SHOW CULTURES" display-tooltip-when-elided="true" class="rts_button" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VisualElement" class="panel panle_info" style="border-top-right-radius: 0; margin-left: 5px; margin-right: 0; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:Label tabindex="-1" text="COMPETITIVE DEEDS" display-tooltip-when-elided="true" name="Label" class="text_classic" style="white-space: normal; -unity-text-align: upper-center;" />
+                        <ui:Label tabindex="-1" text="5" display-tooltip-when-elided="true" name="Label" style="flex-wrap: nowrap; white-space: normal; color: rgb(255, 255, 255); -unity-text-align: upper-center;" />
+                        <ui:Label tabindex="-1" text="DEEDS COMPLETED" display-tooltip-when-elided="true" name="Label" style="flex-wrap: nowrap; white-space: normal; color: rgb(255, 255, 255); -unity-text-align: upper-center;" />
+                        <ui:Button text="SHOW DEEDS" display-tooltip-when-elided="true" class="rts_button" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VisualElement" class="panel" style="flex-grow: 0; flex-basis: 100%; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 20px; margin-left: 5px; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

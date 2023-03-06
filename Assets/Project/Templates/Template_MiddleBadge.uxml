@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="MiddleBadge" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: space-between; align-items: stretch; padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px;">
+        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Project/img/Badge_Crown.png?fileID=2800000&amp;guid=0dd500c8a9caa8d41bc9ea9c74c0ac1f&amp;type=3#Badge_Crown&apos;); -unity-background-scale-mode: scale-to-fit; margin-top: 5px;" />
+        <ui:Label tabindex="-1" text="1" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); font-size: 24px; -unity-text-align: upper-center;" />
+    </ui:VisualElement>
+</ui:UXML>

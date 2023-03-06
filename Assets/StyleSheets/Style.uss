@@ -18,3 +18,44 @@
     margin-top: 0;
     margin-bottom: 5px;
 }
+
+.panle_info {
+    flex-grow: 0;
+    flex-basis: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-around;
+}
+
+.text_classic {
+    -unity-font: none;
+    font-size: 22px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url('project://database/Assets/Project/fonts/Cinzel-VariableFont_wght%20SDF.asset?fileID=11400000&guid=51ccf9b07b89621459ac1ca31935578b&type=2#Cinzel-VariableFont_wght SDF');
+}
+
+.rts_button {
+    background-color: rgba(101, 109, 130, 0.56);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    border-left-color: rgb(171, 149, 98);
+    border-right-color: rgb(171, 149, 98);
+    border-top-color: rgb(171, 149, 98);
+    border-bottom-color: rgb(171, 149, 98);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
