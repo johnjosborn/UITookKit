@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb77443341ef904c91ff6d0e844bced, type: 3}
+  m_Name: Meutons
+  m_EditorClassIdentifier: 
+  factionName: Meutons
+  factionMotto: What is a Meuton?
+  factionImgPath: img/Faction3
+  characterImgPath: img/Char3
+  iconImgPath: img/FactionIcon3
