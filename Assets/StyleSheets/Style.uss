@@ -36,7 +36,7 @@
 
 .text_classic {
     -unity-font: none;
-    font-size: 22px;
+    font-size: 26px;
     -unity-font-style: bold;
     color: rgb(255, 255, 255);
     -unity-font-definition: url('project://database/Assets/Project/fonts/Cinzel-VariableFont_wght%20SDF.asset?fileID=11400000&guid=51ccf9b07b89621459ac1ca31935578b&type=2#Cinzel-VariableFont_wght SDF');

@@ -18,9 +18,9 @@
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="TopMiddle" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-basis: 60%; flex-direction: row; align-items: flex-end;">
-                <ui:VisualElement name="PanelFaction" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-right-radius: 0; border-bottom-right-radius: 0; -unity-background-scale-mode: scale-and-crop; flex-direction: column-reverse; align-items: center; align-self: center;">
-                    <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="FactionName" class="text_classic" />
-                    <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="FactionMotto" class="text_classic" />
+                <ui:VisualElement name="PanelFaction" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-right-radius: 0; border-bottom-right-radius: 0; -unity-background-scale-mode: scale-and-crop; flex-direction: column; align-items: center; align-self: auto; justify-content: flex-end;">
+                    <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="FactionName" class="text_classic" style="color: rgb(255, 211, 0); font-size: 46px;" />
+                    <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="FactionMotto" class="text_classic" style="margin-bottom: 38px; margin-top: 36px;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="PanelBadges" class="panel" style="flex-grow: 1; width: 10%; height: 80%; margin-right: 10px; border-top-left-radius: 0; border-bottom-left-radius: 0;">
                     <ui:VisualElement class="panel_badge" style="flex-grow: 1; background-color: rgb(180, 180, 180);">
@@ -42,7 +42,13 @@
                         <ui:Instance template="Template_MiddleBadgeLocked" name="Template_MiddleBadgeLocked" style="flex-grow: 1;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="PanelList" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
+                <ui:VisualElement name="PanelList" class="panel" style="flex-grow: 1; width: 35%; height: 80%; border-top-right-radius: 0; border-bottom-right-radius: 0;">
+                    <ui:VisualElement name="PanelListTop" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                    <ui:VisualElement name="ListContainer" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); height: 45%;">
+                        <ui:ListView focusable="true" name="List" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="DetailContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                </ui:VisualElement>
                 <ui:VisualElement name="PanelInfo" style="flex-grow: 1; width: 20%; height: 80%; border-top-left-radius: 0; border-bottom-left-radius: 0;">
                     <ui:VisualElement name="VisualElement" class="panel panle_info" style="margin-left: 5px; margin-right: 0; margin-top: 0; margin-bottom: 0;">
                         <ui:Label tabindex="-1" text="ERA GOAL:" display-tooltip-when-elided="true" class="text_classic" />

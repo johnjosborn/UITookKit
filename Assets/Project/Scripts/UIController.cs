@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour
     VisualElement root;
 
     public List<Faction> factions;
+    public List<ListItem> listItems;
 
     void OnEnable()
     {
@@ -15,6 +16,8 @@ public class UIController : MonoBehaviour
         InitializeBadges();
 
         new DropdownController(root, factions);
+
+        new ListController(root, listItems);
     }
 
     void InitializeBadges()
