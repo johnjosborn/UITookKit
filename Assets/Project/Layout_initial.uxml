@@ -47,7 +47,19 @@
                     <ui:VisualElement name="ListContainer" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); height: 45%;">
                         <ui:ListView focusable="true" name="List" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="DetailContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                    <ui:VisualElement name="DetailContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
+                        <ui:VisualElement name="DetailFaction" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-basis: 50%; align-items: center;">
+                            <ui:VisualElement name="DetailImg" style="flex-grow: 1; -unity-background-scale-mode: scale-to-fit; flex-basis: 100%; width: 75%;" />
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="DetailName" class="text_classic" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="Detail_Numbers" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-basis: 50%;">
+                            <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
+                                <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="DetailsScore" style="color: rgb(255, 255, 255); font-size: 24px;" />
+                                <ui:VisualElement name="DetailsScoreImg" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-basis: 25%; -unity-background-scale-mode: scale-to-fit;" />
+                            </ui:VisualElement>
+                            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="DetailsReward" style="color: rgb(255, 255, 255); font-size: 27px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="PanelInfo" style="flex-grow: 1; width: 20%; height: 80%; border-top-left-radius: 0; border-bottom-left-radius: 0;">
                     <ui:VisualElement name="VisualElement" class="panel panle_info" style="margin-left: 5px; margin-right: 0; margin-top: 0; margin-bottom: 0;">

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class ListController
     ListView list;
 
     List<ListItem> listItems;
+
+    ListItem chosenItem;
 
     public ListController(VisualElement root, List<ListItem> items)
     {
@@ -54,5 +57,37 @@ public class ListController
 
         list.itemsSource = listItems;
         list.fixedItemHeight = 60;
+
+        list.selectionChanged += (elem) => OnSelectionChanged(elem);
+    }
+
+    private void OnSelectionChanged(IEnumerable<object> elem)
+    {
+        chosenItem = elem.First() as ListItem;
+        UpdateDetails();
+    }
+
+    
+    private void UpdateDetails()
+    {
+        VisualElement detail_img = root.Q<VisualElement>("DetailImg");
+        Sprite iconImg = Resources.Load<Sprite>("img/" + chosenItem.itemIconPath);
+        detail_img.style.backgroundImage = new StyleBackground(iconImg);
+
+        Debug.Log(detail_img.name);
+
+        Label fraction_label = root.Q<Label>("DetailName");
+        fraction_label.text = chosenItem.itemName;
+
+        Label fraction_score = root.Q<Label>("DetailsScore");
+        fraction_score.text = "Score: " + chosenItem.score;
+
+        VisualElement score_img = root.Q<VisualElement>("DetailsScoreImg");
+        Sprite score_sprite = Resources.Load<Sprite>("img/" + chosenItem.itemIconPath2);
+        score_img.style.backgroundImage = new StyleBackground(score_sprite);
+
+        Label reward_label = root.Q<Label>("DetailsReward");
+        reward_label.text = "Reward: " + chosenItem.reward;
+
     }
 }
