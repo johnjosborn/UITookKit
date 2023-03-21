@@ -1,4 +1,3 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/Lessons/11_Custom_Components/PopUpWindow/Resources/Stylesheet_Popup.uss?fileID=7433441132597879392&amp;guid=5cdcc706ab1151f499c6352f741a0ef7&amp;type=3#Stylesheet_Popup" />
-    <PopupWindow />
 </ui:UXML>

@@ -28,7 +28,7 @@
 .popup_msg {
     font-size: 28px;
     -unity-font-style: normal;
-    color: #fff;
+    color: #000;
 }
 
 .popup_button {

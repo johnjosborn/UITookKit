@@ -1,13 +1,48 @@
+using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class PopupWindow : VisualElement
 {
-    public new class UxmlFactory : UxmlFactory<PopupWindow> { }
+    public new class UxmlFactory : UxmlFactory<PopupWindow, UxmlTraits> { }
+
+    public new class UxmlTraits : VisualElement.UxmlTraits
+    {
+        UxmlStringAttributeDescription
+            promptAttr =
+                new UxmlStringAttributeDescription() { name = "prompt" };
+
+        public override void Init(
+            VisualElement ve,
+            IUxmlAttributes bag,
+            CreationContext cc
+        )
+        {
+            base.Init(ve, bag, cc);
+
+            (ve as PopupWindow).Prompt = promptAttr.GetValueFromBag(bag, cc);
+        }
+    }
+
+    string prompt;
+    public string Prompt{
+        get => prompt;
+        set{
+            prompt = value;
+            UpdatePrompt();
+        }
+    }
+
+    private void UpdatePrompt()
+    {
+        msgLabel.text = prompt;
+    }
+
+    Label msgLabel;
 
     private const string styleResource = "StyleSheet_Popup";
 
-    private const string ussPopup = "popup_container";
+    private const string ussPopup = "popup_window";
 
     private const string ussContainer = "popup_container";
 
@@ -24,7 +59,7 @@ public class PopupWindow : VisualElement
     public PopupWindow()
     {
         styleSheets.Add(Resources.Load<StyleSheet>(styleResource));
-        AddToClassList (ussPopup);
+        AddToClassList (ussContainer);
 
         VisualElement window = new VisualElement();
         hierarchy.Add (window);
@@ -38,7 +73,7 @@ public class PopupWindow : VisualElement
         window.Add (horizontalContainerButtons);
         horizontalContainerButtons.AddToClassList (ussHorContainer);
 
-        Label msgLabel = new Label();
+        msgLabel = new Label();
         horizontalContainerText.Add (msgLabel);
         msgLabel.AddToClassList (ussPopupMsg);
 
